@@ -200,9 +200,8 @@ abstract class WechatMessageCommon {
 	 * 回复消息
 	 */
 	protected function sendMessage($message_body) {
-		$time = time();
-		$tpl = "<xml><ToUserName><![CDATA[%s]]></ToUserName><FromUserName><![CDATA[%s]]></FromUserName><CreateTime>%s</CreateTime>${message_body}</xml>";
-		$body = sprintf($tpl, $this->fromUsername, $this->toUsername, $time);
+		$tpl = "<xml><ToUserName><![CDATA[%s]]></ToUserName><FromUserName><![CDATA[%s]]></FromUserName><CreateTime>%s</CreateTime>%s</xml>";
+		$body = sprintf($tpl, $this->fromUsername, $this->toUsername, time(), $message_body);
 		$this->onSendMessage($body);
 		return $body;
 	}
