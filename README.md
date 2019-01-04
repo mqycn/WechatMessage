@@ -61,7 +61,7 @@ class WechatMessageApp extends WechatMessageCommon {
 
 如果 没有 重写 消息事件，会回复 不支持的消息，方便调试，当然也可以通过重写 onOtherMessage 的方法引导用户操作
 
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0104/163515_563a4dfb_82383.jpeg "5.jpg")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0104/171228_26312f74_82383.jpeg "111.jpg")
 
 ```
 class WechatMessageApp extends WechatMessageCommon {
