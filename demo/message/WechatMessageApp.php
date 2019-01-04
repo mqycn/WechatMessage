@@ -26,6 +26,9 @@ class WechatMessageApp extends WechatMessageCommon {
 	protected function onTextMessage($content) {
 		return $this->textMessage("[自动回复]${content}");
 	}
+	protected function onImageMessage($image, $media_id) {
+		return $this->imageMessage($media_id);
+	}
 	private function addLog($type, $content) {
 		$content = date("Y-m-d H:i:s") . "	" . $content . "\n";
 		file_put_contents(dirname(__FILE__) . "/log/${type}_" . date("Y-m-d") . ".log", $content, FILE_APPEND);
