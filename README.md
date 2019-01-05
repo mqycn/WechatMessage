@@ -44,23 +44,23 @@ class WechatMessageApp extends WechatMessageCommon {
 
 | 消息事件 | 需要重写的方法 | 
 | :-: | - |
-| 用户订阅 | onSubscribeEvent() |
-| 文字消息 | onTextMessage($content) |
-| 图片消息 | onImageMessage($image，$media_id) |
-| 语音消息 | onVoiceMessage($media_id，$format，$to_text) |
-| 视频消息 | onVideoMessage($media_id，$media_thumb_id) |
-| 分享消息 | onLinkMessage($title，$desc，$url) |
-| 文件上传 | onFileMessage($file_name，$desc，$file_key，$file_md5，$file_size) |
-| 位置信息 | onLocationMessage($address，$lat，$lng，$scale) |
-| 进入客服界面(小程序) | onUserEnterTempsessionEvent() |
+| 用户订阅 | `onSubscribeEvent()` |
+| 文字消息 | `onTextMessage($content)` |
+| 图片消息 | `onImageMessage($image，$media_id)` |
+| 语音消息 | `onVoiceMessage($media_id，$format，$to_text)` |
+| 视频消息 | `onVideoMessage($media_id，$media_thumb_id)` |
+| 分享消息 | `onLinkMessage($title，$desc，$url)` |
+| 文件上传 | `onFileMessage($filename，$desc，$file_key，$file_md5，$file_size)` |
+| 位置信息 | `onLocationMessage($address，$lat，$lng，$scale)` |
+| 进入客服界面(小程序) | `onUserEnterTempsessionEvent()` |
 
 | 回复类型 | 回复的方法 | 
 | :-: | - |
-| 文字消息 | textMessage($content) |
-| 图片消息 | imageMessage($media_id) |
-| 语音消息 | voiceMessage($media_id) |
-| 视频消息 | videoMessage($media_id，$title = ''，$desc = '') |
-| 分享消息 | linkMessage($articles = array()) |
+| 文字消息 | `textMessage($content)` |
+| 图片消息 | `imageMessage($media_id)` |
+| 语音消息 | `voiceMessage($media_id)` |
+| 视频消息 | `videoMessage($media_id，$title = ''，$desc = '')` |
+| 分享消息 | `linkMessage($articles = array())` |
 
 
 公众号没有认证，只能回复文本信息、分享消息，因为 图片、语音、视频 需要用到上传媒体资源的接口。（可能有的朋友会抬杠，图片信息能获得媒体ID、这样客户实现客户给你发啥图片，你就回复给他图片，但是这样没啥意义）
